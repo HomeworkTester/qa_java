@@ -19,6 +19,7 @@ public class Feline extends Animal implements Predator, FelineInterface {
         return getKittens(1);
     }
 
+    @Override
     public int getKittens(int kittensCount) {
         return kittensCount;
     }

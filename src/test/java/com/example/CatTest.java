@@ -16,8 +16,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class CatTest {
 
     @Mock
-    Feline mockFeline;
-    Cat cat;
+    private Feline mockFeline;
+    private Cat cat;
 
     @BeforeEach
     public void setUp() {

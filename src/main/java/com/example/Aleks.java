@@ -1,7 +1,6 @@
 package com.example;
 
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.util.List;
 
 public class Aleks extends Lion {
 
@@ -9,12 +8,8 @@ public class Aleks extends Lion {
         super("Самец", feline);
     }
 
-    public Map<String, String> getFriends() {
-        Map<String, String> friends = new LinkedHashMap<>();
-        friends.put("Зебра", "Марти");
-        friends.put("Бегемотиха", "Глория");
-        friends.put("Жираф", "Мелман");
-        return friends;
+    public List<String> getFriends() {
+        return List.of("Марти", "Глория", "Мелман");
     }
 
     public String getPlaceOfLiving() {
@@ -26,4 +21,3 @@ public class Aleks extends Lion {
         return 0;
     }
 }
-

@@ -6,8 +6,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -26,18 +25,18 @@ class AleksTest {
     }
 
     @Test
-    void shouldCreateMaleLionAleks() {
+    void shouldCreateMaleLionAleksWithMane() {
         assertTrue(aleks.doesHaveMane(), "Алекс должен быть самцом с гривой");
+    }
+
+    @Test
+    void shouldPassFelineIntoConstructor() {
         assertEquals(felineMock, aleks.getFeline(), "Feline должен быть передан в конструктор");
     }
 
     @Test
     void shouldReturnCorrectFriendsList() {
-        Map<String, String> expectedFriends = new LinkedHashMap<>();
-        expectedFriends.put("Зебра", "Марти");
-        expectedFriends.put("Бегемотиха", "Глория");
-        expectedFriends.put("Жираф", "Мелман");
-
+        List<String> expectedFriends = List.of("Марти", "Глория", "Мелман");
         assertEquals(expectedFriends, aleks.getFriends(), "Список друзей должен совпадать");
     }
 
